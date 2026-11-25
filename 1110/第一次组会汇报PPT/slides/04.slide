@@ -1,0 +1,51 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  {/* 顶条 */}
+  <Box style={{ marginBottom: 20 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>01 · 方法 —— DAS 波束形成与低质/高质定义</Text>
+  </Box>
+
+  <Box style={{ flexDirection: 'row', gap: 32 }}>
+    {/* 左：DAS 原理 */}
+    <Box style={{ flex: 1.1 }}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 12 }}>DAS（延迟求和）波束形成</Text>
+      <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.6 }}>
+        对成像区域每个像素 <span style={{ fontWeight: 'bold' }}>(x, z)</span>，计算声波从发射到该点、再返回每个阵元的<span style={{ fontWeight: 'bold' }}>往返时延 τ</span>，把各阵元信号在 τ 处对齐叠加。
+      </Text>
+      <Box style={{ background: '#F7F9FC', padding: '16px 18px', borderRadius: 6, marginTop: 14, marginBottom: 14 }}>
+        <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.7, textAlign: 'center' }}>
+          τ = (x·sinθ + z·cosθ)/c  +  √((x−x<sub>elem</sub>)² + z²)/c
+        </Text>
+        <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 8, lineHeight: 1.4, textAlign: 'center' }}>
+          发射时延（平面波方向 θ）+ 接收时延（阵元到像素点距离）
+        </Text>
+      </Box>
+      <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.6 }}>
+        关键参数（PICMUS 真实值）：<span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>75 角度 · 128 阵元 · 采样率 20.832 MHz · 声速 1540 m/s</span>
+      </Text>
+    </Box>
+
+    {/* 右：低质 vs 高质 */}
+    <Box style={{ flex: 1 }}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 12 }}>低质 vs 高质 的定义</Text>
+      <Box style={{ flexDirection: 'column', gap: 16 }}>
+        <Box style={{ border: '1px solid #D6DCE5', borderRadius: 8, padding: '16px 18px' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', marginBottom: 6 }}>低质图（输入）</Text>
+          <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.5 }}>
+            单个平面波角度（0°）DAS 成像 → 旁瓣多、条纹伪影重、散斑粗糙
+          </Text>
+        </Box>
+        <Box style={{ border: '1px solid #D6DCE5', borderRadius: 8, padding: '16px 18px' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', marginBottom: 6 }}>高质图（目标真值）</Text>
+          <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.5 }}>
+            75 个角度相干复合（累加取平均）→ 合成大孔径、抑制旁瓣、点目标锐利
+          </Text>
+        </Box>
+        <Box style={{ background: '#E8EFF8', borderRadius: 8, padding: '14px 18px' }}>
+          <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+            <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>为什么复合是高质量？</span> 多角度相干叠加等价于扩大接收孔径，旁瓣相互抵消、主瓣更窄。
+          </Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

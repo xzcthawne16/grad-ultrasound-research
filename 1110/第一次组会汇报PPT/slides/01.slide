@@ -1,0 +1,32 @@
+<Slide style={{ width: 1280, height: 720, padding: 0, background: '#FFFFFF', position: 'relative' }}>
+  {/* 顶部深蓝标题区 */}
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 210, background: '#1E4FA8' }} />
+  {/* 校徽 logo */}
+  <Box style={{ position: 'absolute', top: 52, left: 80, width: 96, height: 102 }}>
+    <Image src="assets/logo.png" style={{ width: 96, height: 102, objectFit: 'contain' }} />
+  </Box>
+  {/* 封面主标题 */}
+  <Box style={{ position: 'absolute', top: 66, left: 210, width: 990 }}>
+    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25 }}>
+      基于深度学习的超声平面波图像重建
+    </Text>
+    <Text style={{ fontSize: 20, color: '#D6E2F5', marginTop: 14, lineHeight: 1.4 }}>
+      少角度低质量图像 → 高质量图像的最小闭环复现与验证
+    </Text>
+  </Box>
+  {/* 校名横匾装饰条 */}
+  <Box style={{ position: 'absolute', bottom: 40, left: 0, width: '100%', height: 90, display: 'flex', justifyContent: 'center' }}>
+    <Image src="assets/school_banner.png" style={{ width: 640, height: 90, objectFit: 'contain', opacity: 0.9 }} />
+  </Box>
+  {/* 信息层 */}
+  <Box style={{ position: 'absolute', bottom: 150, left: 80, width: 1120, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+    <Box>
+      <Text style={{ fontSize: 16, color: '#1E4FA8', fontWeight: 'bold', lineHeight: 1.5 }}>汇报人</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.5 }}>指导教师</Text>
+    </Box>
+    <Box style={{ alignItems: 'flex-end' }}>
+      <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.5 }}>2026 年 11 月</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.5 }}>课题组组会汇报</Text>
+    </Box>
+  </Box>
+</Slide>

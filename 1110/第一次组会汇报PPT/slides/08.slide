@@ -1,0 +1,54 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 16 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>02 · 论文对照 —— Perdios 2021</Text>
+  </Box>
+
+  {/* 一句话定位 */}
+  <Box style={{ background: '#E8EFF8', padding: '14px 18px', borderRadius: 6, marginBottom: 20 }}>
+    <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.5 }}>
+      <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>论文核心</span>：用 CNN 把超快超声「少角度发射」造成的低质量图，重建到接近「多角度复合」的高质量图 —— 与我方「低质 → 高质」是同一条重建思路。
+    </Text>
+  </Box>
+
+  {/* 对照表 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 8 }}>论文方法 ↔ 我的复现</Text>
+  <Table
+    style={{ width: '100%', height: 320 }}
+    defaultTextStyle={{ fontSize: 16, textAlign: 'left', color: '#1A2230' }}
+    defaultCellStyle={{ border: { left: { width: 1, color: '#D6DCE5' }, right: { width: 1, color: '#D6DCE5' }, top: { width: 1, color: '#D6DCE5' }, bottom: { width: 1, color: '#D6DCE5' } }, padding: '10px 14px' }}
+    cells={[
+      [
+        { text: '维度', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+        { text: 'Perdios 2021', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+        { text: '我的项目', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+      ],
+      [
+        { text: '问题', textStyle: { bold: true } },
+        { text: '超快超声少角度发射 → 图像质量下降' },
+        { text: '单平面波 / 少角度 → 低质 B 图' },
+      ],
+      [
+        { text: '方法', textStyle: { bold: true } },
+        { text: 'CNN 低质 → 高质重建（逐像素回归）' },
+        { text: 'UNet 低质 DAS → 高质复合' },
+      ],
+      [
+        { text: '数据', textStyle: { bold: true } },
+        { text: 'MATLAB + MUST 仿真' },
+        { text: 'Python 自仿真 + PICMUS 公开数据' },
+      ],
+      [
+        { text: '指标', textStyle: { bold: true } },
+        { text: 'PSNR / SSIM（强调图像依赖）' },
+        { text: '同口径 PSNR / SSIM + baseline' },
+      ],
+    ]}
+  />
+
+  {/* 一句能脱口而出的话 */}
+  <Box style={{ marginTop: 14, background: '#FFF8E1', borderRadius: 6, padding: '12px 18px' }}>
+    <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+      <span style={{ fontWeight: 'bold', color: '#D9534F' }}>一句话</span>：Perdios 证明了 CNN 能把少角度低质量图重建到接近多角度复合质量；我用 Python + 公开数据复现了同一条「低质→高质」重建链，并额外验证了角度数与重建质量的关系（创新点）。
+    </Text>
+  </Box>
+</Slide>

@@ -1,0 +1,57 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 20 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>01 · 结果 —— SSIM 下降排查与调优</Text>
+  </Box>
+
+  {/* 上半：SSIM 排查 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 10 }}>现象：PSNR 升、SSIM 降 —— 为什么？</Text>
+  <Box style={{ flexDirection: 'row', gap: 24, marginBottom: 22 }}>
+    <Box style={{ flex: 1.2 }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.55, marginBottom: 10 }}>
+        把 SSIM 拆成 <span style={{ fontWeight: 'bold' }}>亮度 l × 对比度 c × 结构 s</span> 三分量定位：<span style={{ fontWeight: 'bold', color: '#D9534F' }}>对比度 c 下降</span> = 过平滑，不是口径 bug。
+      </Text>
+      <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.55 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>机理</span>：MSE 最优解是条件均值 E[高质|低质]，而超声 speckle 是随机乘性噪声，取平均把纹理抹平 → 输出变平滑 → PSNR 涨（像素更接近平均）、SSIM 掉（纹理丢）。
+      </Text>
+    </Box>
+    <Box style={{ flex: 0.8, background: '#E8EFF8', borderRadius: 8, padding: '14px 18px' }}>
+      <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>结论</span>：这是「MSE 训练 + SSIM 评价」的<span style={{ fontWeight: 'bold' }}>指标错配</span>典型信号 —— 不是 bug，是损失函数选择问题。
+      </Text>
+    </Box>
+  </Box>
+
+  {/* 下半：调优结果表 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 10 }}>调优结果：换 L1 损失实现「PSNR + SSIM 双升」</Text>
+  <Table
+    style={{ width: '100%', height: 220 }}
+    defaultTextStyle={{ fontSize: 17, textAlign: 'center', color: '#1A2230' }}
+    defaultCellStyle={{ border: { left: { width: 1, color: '#D6DCE5' }, right: { width: 1, color: '#D6DCE5' }, top: { width: 1, color: '#D6DCE5' }, bottom: { width: 1, color: '#D6DCE5' } } }}
+    cells={[
+      [
+        { text: '方案', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+        { text: 'PSNR (dB)', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+        { text: 'SSIM', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+        { text: '说明', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+      ],
+      [
+        { text: 'baseline（低质图）' },
+        { text: '24.67' },
+        { text: '0.8584' },
+        { text: '不重建的最低标准' },
+      ],
+      [
+        { text: 'MSE（第一版）', textStyle: { color: '#D9534F', bold: true } },
+        { text: '29.13' },
+        { text: '0.4228', textStyle: { color: '#D9534F', bold: true } },
+        { text: 'PSNR 升但 SSIM 崩（过平滑）' },
+      ],
+      [
+        { text: 'L1（调优后）', textStyle: { color: '#1E4FA8', bold: true } },
+        { text: '30.25', textStyle: { color: '#1E4FA8', bold: true } },
+        { text: '0.9288', textStyle: { color: '#1E4FA8', bold: true } },
+        { text: '双升，解决过平滑', textStyle: { color: '#1E4FA8', bold: true } },
+      ],
+    ]}
+  />
+</Slide>

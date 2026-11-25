@@ -1,0 +1,48 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  {/* 顶条 */}
+  <Box style={{ marginBottom: 18 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>01 · 项目复现 —— 定位与整体链路</Text>
+  </Box>
+
+  {/* 一句话定位 */}
+  <Box style={{ background: '#E8EFF8', padding: '16px 20px', borderRadius: 6, marginBottom: 28 }}>
+    <Text style={{ fontSize: 20, color: '#1A2230', lineHeight: 1.5 }}>
+      <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>核心命题</span>：用「少角度（单平面波）低质量图像」训练深度网络，重建出逼近「多角度相干复合」的高质量图像 —— <span style={{ fontWeight: 'bold', color: '#D9534F' }}>少数据 → 同等质量</span>
+    </Text>
+  </Box>
+
+  {/* 链路流程图 */}
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, justifyContent: 'space-between', marginBottom: 32 }}>
+    {[
+      { t: '数据', d: '自仿真点散射体\nPICMUS 真实RF' },
+      { t: '波束形成', d: 'DAS\n单角度=低质\n多角度复合=高质' },
+      { t: '配对造样本', d: '仿真:随机散射体\n公开:空间切patch' },
+      { t: 'DL 重建', d: 'UNet 逐像素回归\nL1 损失' },
+      { t: '指标验证', d: 'PSNR / SSIM\n+ baseline 对比' },
+    ].map((s, i) => (
+      <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flex: 1 }}>
+        <Box style={{ flex: 1, background: '#FFFFFF', border: '2px solid #1E4FA8', borderRadius: 8, padding: '14px 10px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1.3, textAlign: 'center' }}>{s.t}</Text>
+          <Text style={{ fontSize: 14, color: '#4A5568', marginTop: 6, lineHeight: 1.4, textAlign: 'center', whiteSpace: 'pre-line' }}>{s.d}</Text>
+        </Box>
+        {i < 4 && <Text style={{ fontSize: 24, color: '#1E4FA8', fontWeight: 'bold' }}>→</Text>}
+      </Box>
+    ))}
+  </Box>
+
+  {/* 三个关键数字 */}
+  <Box style={{ flexDirection: 'row', gap: 24 }}>
+    <Box style={{ flex: 1, borderTop: '3px solid #1E4FA8', paddingTop: 16 }}>
+      <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E4FA8' }}>+10.30 dB</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 4, lineHeight: 1.4 }}>PICMUS 上 PSNR 提升</Text>
+    </Box>
+    <Box style={{ flex: 1, borderTop: '3px solid #1E4FA8', paddingTop: 16 }}>
+      <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E4FA8' }}>0.9936</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 4, lineHeight: 1.4 }}>PICMUS 上 SSIM（接近满分 1.0）</Text>
+    </Box>
+    <Box style={{ flex: 1, borderTop: '3px solid #1E4FA8', paddingTop: 16 }}>
+      <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E4FA8' }}>187 对</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 4, lineHeight: 1.4 }}>PICMUS 切 patch 构造的训练样本</Text>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,71 @@
+=== boot pid=30816 ts=2026-11-10 17:22:15.326 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js create 组会汇报.pptx ===
+[2026-11-10 17:22:15.325] [INFO ] [pid=30816] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+=== boot pid=11876 ts=2026-11-10 17:22:35.275 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/01.slide ===
+[2026-11-10 17:22:35.274] [INFO ] [pid=11876] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:22:35.306] [INFO ] [pid=11876] [slide-version] fileId=964CD93C version=0 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=25116 ts=2026-11-10 17:23:03.314 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/02.slide ===
+[2026-11-10 17:23:03.313] [INFO ] [pid=25116] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:23:03.346] [INFO ] [pid=25116] [slide-version] fileId=964CD93C version=1 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=32372 ts=2026-11-10 17:23:24.244 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/03.slide ===
+[2026-11-10 17:23:24.243] [INFO ] [pid=32372] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:23:24.281] [INFO ] [pid=32372] [slide-version] fileId=964CD93C version=2 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=31060 ts=2026-11-10 17:23:46.074 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/04.slide ===
+[2026-11-10 17:23:46.073] [INFO ] [pid=31060] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:23:46.107] [INFO ] [pid=31060] [slide-version] fileId=964CD93C version=3 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=17360 ts=2026-11-10 17:24:08.759 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/05.slide ===
+[2026-11-10 17:24:08.757] [INFO ] [pid=17360] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:24:08.796] [INFO ] [pid=17360] [slide-version] fileId=964CD93C version=4 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=18180 ts=2026-11-10 17:24:55.343 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/06.slide ===
+[2026-11-10 17:24:55.342] [INFO ] [pid=18180] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:24:55.374] [INFO ] [pid=18180] [slide-version] fileId=964CD93C version=5 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=31272 ts=2026-11-10 17:25:12.894 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/07.slide ===
+[2026-11-10 17:25:12.892] [INFO ] [pid=31272] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:25:12.926] [INFO ] [pid=31272] [slide-version] fileId=964CD93C version=6 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=19156 ts=2026-11-10 17:25:34.049 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/08.slide ===
+[2026-11-10 17:25:34.047] [INFO ] [pid=19156] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:25:34.088] [INFO ] [pid=19156] [slide-version] fileId=964CD93C version=7 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=9104 ts=2026-11-10 17:25:47.318 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/08.slide --page-index 7 ===
+[2026-11-10 17:25:47.318] [INFO ] [pid=9104] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:25:47.350] [INFO ] [pid=9104] [slide-version] fileId=964CD93C version=8 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=25240 ts=2026-11-10 17:26:15.341 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/09.slide ===
+[2026-11-10 17:26:15.339] [INFO ] [pid=25240] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:26:15.373] [INFO ] [pid=25240] [slide-version] fileId=964CD93C version=9 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=28852 ts=2026-11-10 17:26:38.938 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/10.slide ===
+[2026-11-10 17:26:38.937] [INFO ] [pid=28852] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:26:38.978] [INFO ] [pid=28852] [slide-version] fileId=964CD93C version=10 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=30456 ts=2026-11-10 17:26:58.591 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/11.slide ===
+[2026-11-10 17:26:58.590] [INFO ] [pid=30456] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:26:58.623] [INFO ] [pid=30456] [slide-version] fileId=964CD93C version=11 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=30964 ts=2026-11-10 17:27:12.338 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/12.slide ===
+[2026-11-10 17:27:12.337] [INFO ] [pid=30964] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 17:27:12.371] [INFO ] [pid=30964] [slide-version] fileId=964CD93C version=12 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=35476 ts=2026-11-10 22:10:04.183 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/05.slide --page-index 4 ===
+[2026-11-10 22:10:04.182] [INFO ] [pid=35476] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 22:10:04.216] [ERROR] [pid=35476] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} ms=28
+[2026-11-10 22:10:04.217] [WARN ] [pid=35476] [slide-version] no editor for filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx, trigger reopen
+[2026-11-10 22:10:04.221] [ERROR] [pid=35476] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} ms=2
+[2026-11-10 22:10:04.222] [INFO ] [pid=35476] [open-file] open send url=http://127.0.0.1:39099/localapi/open filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+[2026-11-10 22:10:04.241] [INFO ] [pid=35476] [open-file] open ok fileId=DD538D3A fileType=slide filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx ms=17
+[2026-11-10 22:10:04.244] [INFO ] [pid=35476] [slide-version] fileId=DD538D3A version=0 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=27436 ts=2026-11-10 22:10:20.593 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/05.slide --page-index 4 ===
+[2026-11-10 22:10:20.592] [INFO ] [pid=27436] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 22:10:20.619] [INFO ] [pid=27436] [slide-version] fileId=sid_mwar version=0 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=6112 ts=2026-11-10 22:10:31.793 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/05.slide --page-index 4 ===
+[2026-11-10 22:10:31.792] [INFO ] [pid=6112] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 22:10:31.818] [INFO ] [pid=6112] [slide-version] fileId=sid_mwar version=1 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+=== boot pid=32584 ts=2026-11-10 22:11:23.673 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报_tmp.pptx --dsl-file slides/05.slide --page-index 4 ===
+[2026-11-10 22:11:23.672] [INFO ] [pid=32584] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 22:11:23.700] [ERROR] [pid=32584] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报_tmp.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报_tmp.pptx"} ms=24
+[2026-11-10 22:11:23.701] [WARN ] [pid=32584] [slide-version] no editor for filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报_tmp.pptx, trigger reopen
+[2026-11-10 22:11:23.705] [ERROR] [pid=32584] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报_tmp.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报_tmp.pptx"} ms=2
+[2026-11-10 22:11:23.706] [INFO ] [pid=32584] [open-file] open send url=http://127.0.0.1:39099/localapi/open filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报_tmp.pptx
+[2026-11-10 22:11:23.714] [INFO ] [pid=32584] [open-file] open ok fileId=46BA9ED4 fileType=slide filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报_tmp.pptx ms=7
+[2026-11-10 22:11:23.717] [INFO ] [pid=32584] [slide-version] fileId=46BA9ED4 version=0 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报_tmp.pptx
+=== boot pid=21960 ts=2026-11-10 22:12:08.927 cwd=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2-6\node_modules\@tencent\slidep\dist\index.js upsert-dsl 组会汇报.pptx --dsl-file slides/05.slide --page-index 4 ===
+[2026-11-10 22:12:08.926] [INFO ] [pid=21960] [server-url] baseUrl=http://127.0.0.1:39099 source=env
+[2026-11-10 22:12:08.953] [ERROR] [pid=21960] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} ms=23
+[2026-11-10 22:12:08.954] [WARN ] [pid=21960] [slide-version] no editor for filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx, trigger reopen
+[2026-11-10 22:12:08.959] [ERROR] [pid=21960] [http] editorStatus http 404 url=http://127.0.0.1:39099/localapi/editor/status req={"file_path":"E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} resp={"code":-1,"message":"no editor open for file_path=E:\\develop\\Graduate_AI\\2026-11\\1110\\组会汇报PPT\\组会汇报.pptx"} ms=3
+[2026-11-10 22:12:08.960] [INFO ] [pid=21960] [open-file] open send url=http://127.0.0.1:39099/localapi/open filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx
+[2026-11-10 22:12:08.965] [INFO ] [pid=21960] [open-file] open ok fileId=98FB4DC7 fileType=slide filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx ms=4
+[2026-11-10 22:12:08.968] [INFO ] [pid=21960] [slide-version] fileId=98FB4DC7 version=0 filePath=E:\develop\Graduate_AI\2026-11\1110\组会汇报PPT\组会汇报.pptx

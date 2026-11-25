@@ -1,0 +1,50 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 20 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>02 · 论文局限 —— 与我的项目对应</Text>
+  </Box>
+
+  <Box style={{ flexDirection: 'row', gap: 24, marginBottom: 24 }}>
+    {/* 左：论文局限 */}
+    <Box style={{ flex: 1 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 12 }}>Perdios 论文的局限（V 节）</Text>
+      <Box style={{ flexDirection: 'column', gap: 12 }}>
+        {[
+          '图像质量指标依赖（PSNR/SSIM 与感知质量不完全一致）',
+          'speckle 纹理重建的固有困难（乘性噪声）',
+          '仿真数据训练，泛化到真实数据受限',
+          '少角度数量与重建质量的关系未系统研究',
+        ].map((t, i) => (
+          <Box key={i} style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1E4FA8', width: 26 }}>{i + 1}.</Text>
+            <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5, flex: 1 }}>{t}</Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+
+    {/* 右：我的对应 */}
+    <Box style={{ flex: 1 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 12 }}>我的项目中的对应</Text>
+      <Box style={{ flexDirection: 'column', gap: 12 }}>
+        {[
+          '遇到同样的「PSNR 升 + SSIM 降」，已用 L1 损失解决过平滑',
+          'speckle 过平滑问题通过三分量分解定位、L1 保纹理缓解',
+          '用 PICMUS 真实 RF 数据验证，弥补「只在仿真成立」的短板',
+          '下一步计划：角度稀疏采样消融（这正是论文未系统研究的方向）',
+        ].map((t, i) => (
+          <Box key={i} style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#D9534F', width: 26 }}>{i + 1}.</Text>
+            <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5, flex: 1 }}>{t}</Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  </Box>
+
+  {/* 结论条 */}
+  <Box style={{ background: '#E8EFF8', borderRadius: 6, padding: '14px 18px' }}>
+    <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5 }}>
+      <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>启示</span>：论文的第 4 条局限（角度数与质量关系未系统研究）正是我的下一步切入点 —— 把「1 角度 → 75 角度」这一个点，扩展成「角度数 K 从 1 到 75 的整条曲线」。
+    </Text>
+  </Box>
+</Slide>

@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 22 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>总结与展望</Text>
+  </Box>
+
+  {/* 总结 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>已完成</Text>
+  <Box style={{ flexDirection: 'column', gap: 10, marginBottom: 24 }}>
+    {[
+      ['完整闭环', '自仿真 + PICMUS 真实数据，走通「数据→DAS→配对→DL→指标→baseline」全链路'],
+      ['指标可信', '查清「PSNR 升 + SSIM 降」是过平滑（指标错配），非 bug，并用 L1 损失解决'],
+      ['真实数据验证', 'PICMUS 上 PSNR +10.30 dB、SSIM 0.9936，方法不只在仿真成立'],
+      ['思考深度', '三个对症调优（L1 / 减参 / PixelShuffle）+ 归一化踩坑教训'],
+    ].map((r, i) => (
+      <Box key={i} style={{ flexDirection: 'row', gap: 14, alignItems: 'flex-start' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1E4FA8', width: 110 }}>{r[0]}</Text>
+        <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.5, flex: 1 }}>{r[1]}</Text>
+      </Box>
+    ))}
+  </Box>
+
+  {/* 展望 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>下一步</Text>
+  <Box style={{ flexDirection: 'row', gap: 20 }}>
+    {[
+      { t: '角度稀疏采样消融', d: 'K vs 指标曲线，量化「少数据同等质量」（近期，创新点）' },
+      { t: '残差 + 组合损失', d: '网络只学「残差=高质−低质」，进一步对抗过平滑' },
+      { t: '仿真→真实跨域', d: '自仿真模型直接测 PICMUS，量化域差距，引出域适应' },
+    ].map((c, i) => (
+      <Box key={i} style={{ flex: 1, border: '1px solid #D6DCE5', borderRadius: 8, padding: '16px 18px' }}>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 6 }}>{c.t}</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.5 }}>{c.d}</Text>
+      </Box>
+    ))}
+  </Box>
+</Slide>

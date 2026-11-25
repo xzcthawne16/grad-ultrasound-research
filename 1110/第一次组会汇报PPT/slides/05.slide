@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 20 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>01 · 网络 —— UNet 与三个关键调优</Text>
+  </Box>
+
+  {/* 上部：UNet 结构图 + 参数量卡 */}
+  <Box style={{ flexDirection: 'row', gap: 24, marginBottom: 20, alignItems: 'center' }}>
+    <Box style={{ flex: 1.5, borderRadius: 8, overflow: 'hidden', border: '1px solid #D6DCE5' }}>
+      <Image src="assets/unet_struct.png" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </Box>
+    <Box style={{ flex: 0.5, background: '#FFFFFF', border: '2px solid #1E4FA8', borderRadius: 8, padding: '18px 20px', alignItems: 'center' }}>
+      <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E4FA8' }}>7.8M</Text>
+      <Text style={{ fontSize: 16, color: '#4A5568', marginTop: 4, lineHeight: 1.4, textAlign: 'center' }}>参数量（原 31M 减半后）</Text>
+      <Text style={{ fontSize: 14, color: '#4A5568', marginTop: 10, lineHeight: 1.4, textAlign: 'center' }}>沙漏形通道<br/>1→32→…→512→…→1</Text>
+    </Box>
+  </Box>
+
+  {/* 三个调优点 */}
+  <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginBottom: 12 }}>三个关键调优（对症下药）</Text>
+  <Box style={{ flexDirection: 'row', gap: 20 }}>
+    {[
+      { tag: '①', t: 'MSE → L1 损失', d: 'MSE 最优解是条件均值，会把随机 speckle 抹平导致过平滑；L1 保边缘、不过度平滑。', kw: '解决过平滑' },
+      { tag: '②', t: '参数减半 31M→7.8M', d: '149 对训练样本配 3100 万参数严重失衡易过拟合，通道减半后泛化更好。', kw: '解决过拟合' },
+      { tag: '③', t: '转置卷积→PixelShuffle', d: '转置卷积上采样会引入棋盘状伪影，PixelShuffle 从根上消除棋盘格。', kw: '消除棋盘伪影' },
+    ].map((c) => (
+      <Box key={c.tag} style={{ flex: 1, border: '1px solid #D6DCE5', borderRadius: 8, padding: '16px 18px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 6 }}>{c.tag} {c.t}</Text>
+        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.55, marginBottom: 10 }}>{c.d}</Text>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#D9534F' }}>{c.kw}</Text>
+      </Box>
+    ))}
+  </Box>
+
+  {/* 归一化教训 */}
+  <Box style={{ marginTop: 20, background: '#FFF8E1', borderRadius: 8, padding: '14px 18px' }}>
+    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.55 }}>
+      <span style={{ fontWeight: 'bold', color: '#D9534F' }}>踩坑教训</span>：超声图归一化须「除以绝对最大值」而非「减 min 再除 range」——否则背景被抬到中间灰度、整图显示灰白。修正后 PSNR 提升从 +4.7 dB 跃升至 +10.3 dB。
+    </Text>
+  </Box>
+</Slide>

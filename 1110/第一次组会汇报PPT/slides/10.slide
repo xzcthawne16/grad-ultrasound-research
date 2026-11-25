@@ -1,0 +1,55 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ marginBottom: 18 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF', background: '#1E4FA8', padding: '10px 20px', borderRadius: 4, display: 'inline-block' }}>03 · 论文启发 —— 角度稀疏采样消融（下一步）</Text>
+  </Box>
+
+  {/* 核心思路 */}
+  <Box style={{ background: '#E8EFF8', padding: '16px 20px', borderRadius: 6, marginBottom: 24 }}>
+    <Text style={{ fontSize: 19, color: '#1A2230', lineHeight: 1.55 }}>
+      <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>把「一个点」扩成「一条曲线」</span>：固定输入 = 1 角度，把高质目标换成 K 角度复合（K = 1, 3, 5, 9, 17, 33, 75），观察 DL 重建的 PSNR/SSIM 随 K 如何变化 —— <span style={{ fontWeight: 'bold', color: '#D9534F' }}>「用 1/75 的发射数据逼近满配质量」</span>。
+    </Text>
+  </Box>
+
+  {/* 实验设计 */}
+  <Box style={{ flexDirection: 'row', gap: 24, marginBottom: 24 }}>
+    <Box style={{ flex: 1 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 10 }}>实验设计</Text>
+      <Box style={{ flexDirection: 'column', gap: 10 }}>
+        {[
+          '复用 DAS，加「K 角度均匀采样复合」函数',
+          'K = 1, 3, 5, 9, 17, 33, 75 七个档位',
+          '每个 K 训一个 DL（输入固定 = 1 角度低质）',
+          '记录 baseline 与 DL 的 PSNR/SSIM 各一条曲线',
+        ].map((t, i) => (
+          <Box key={i} style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start' }}>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8', width: 22 }}>{i + 1}.</Text>
+            <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.5, flex: 1 }}>{t}</Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E4FA8', marginBottom: 10 }}>预期发现（可讲的价值）</Text>
+      <Box style={{ flexDirection: 'column', gap: 10 }}>
+        {[
+          '两条线（baseline vs DL）在 K 大处明显分开',
+          '若 DL 用 1 角度、在 K=3~9 就逼近 K=75，即「更少数据同等质量」的直接证据',
+          '「3 角度 + DL ≈ 75 角度」这个数字本身就是创新卖点',
+          '对应超声超快成像核心诉求：减少发射次数 = 提高帧率',
+        ].map((t, i) => (
+          <Box key={i} style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start' }}>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8', width: 22 }}>{i + 1}.</Text>
+            <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.5, flex: 1 }}>{t}</Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  </Box>
+
+  {/* 诚实边界 */}
+  <Box style={{ background: '#FFF8E1', borderRadius: 6, padding: '12px 18px' }}>
+    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.5 }}>
+      <span style={{ fontWeight: 'bold', color: '#D9534F' }}>诚实边界</span>：若曲线没跑出预期（DL 提升不明显），如实记录为「当前网络容量/数据瓶颈」；曲线形状本身（无论陡还是平）都是可讲的发现。
+    </Text>
+  </Box>
+</Slide>
