@@ -15,3 +15,8 @@ Thumbs.db
 
 # 嵌套独立仓库（1118/us-recon 有自己的远端，不入外层仓库）
 1118/us-recon/
+
+# 模型权重与导出产物（二进制，不入库；跑 export_onnx.py 可重新生成）
+*.pth
+*.onnx
+*.onnx.data
